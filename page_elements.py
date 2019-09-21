@@ -3,6 +3,9 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
+co = webdriver.ChromeOptions()
+co.add_arguments("--headless")
+co.add_arguments("-loglevel=4")
 driver = webdriver.Chrome(chrome_options=co)
 
 # 1) Wait 10 seconds until element is visible in page then returns element
